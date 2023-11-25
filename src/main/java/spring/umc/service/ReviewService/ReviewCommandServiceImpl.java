@@ -30,6 +30,7 @@ public class ReviewCommandServiceImpl implements ReviewCommandService {
         User user = userRepository.findById(userId).orElseThrow(() -> new ReviewHandler(ErrorStatus.MEMBER_NOT_FOUND));
         Store store = storeRepository.findById(storeId).orElseThrow(() -> new ReviewHandler(ErrorStatus._BAD_REQUEST));
         Review newReview = ReviewConverter.toReview(request, user, store);
+        store.addReview(newReview);
         return reviewRepository.save(newReview);
 
     }

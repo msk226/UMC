@@ -32,7 +32,18 @@ public class Store extends BaseEntity{
     private List<Review> reviews;
 
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
+    private List<Mission> missions;
+
+    @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
     private List<Food> foods;
+
+    public void addReview(Review review) {
+        reviews.add(review);
+    }
+
+    public void addMission(Mission mission){
+        missions.add(mission);
+    }
 }
 
 
