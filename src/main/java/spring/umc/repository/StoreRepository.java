@@ -1,4 +1,4 @@
-package spring.umc.apiPayload.repository;
+package spring.umc.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import spring.umc.domain.Store;
