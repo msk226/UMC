@@ -41,4 +41,11 @@ public class UserCommandServiceImpl implements UserCommandService {
 
         return userRepository.save(newUser);
     }
+
+    @Override
+    public boolean existsById(Long id) {
+        return foodCategoryRepository.existsById(id);
+    }
+
+
 }

@@ -9,4 +9,6 @@ public interface UserCommandService {
 
     User joinUser(UserRequestDTO.joinDTO request);
 
+    boolean existsById(Long id);
+
 }
